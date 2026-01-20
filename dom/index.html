@@ -1,32 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <input type="text">
+  </head>
+  <body>
+    <input id="no" type="text" />
     <button id="submit">Click me</button>
-</body>
+    <button id="square">square</button>
+  </body>
 
-<script>
-    const button = document.getElementById('submit');
+  <script>
+    const button = document.getElementById("submit");
     // const catchVal = () => {
     //     const input = document.querySelector('input[type="text"]');
     //     console.log(input.value);
     // }
-    function normalFun(){
-        console.log(event)
-        console.log("this is normal function")
+    function normalFun() {
+      console.log(event);
+      console.log("this is normal function");
     }
-    normalFun()
-    button.addEventListener('click', catchVal);
-    function catchVal(){
-        console.log(event)
-        const input = document.querySelector('input[type="text"]');
-        console.log(input.value);
+    normalFun();
+    button.addEventListener("click", catchVal);
+    function catchVal() {
+      console.log(event);
+      const input = document.querySelector('input[type="text"]');
+      console.log(input.value);
     }
-    
-</script>
+
+    document.getElementById("square").addEventListener("click", () => {
+      let number = document.getElementById("no").value; 
+      square(number);
+    });
+
+    function square(num) {
+        let sq = num * num;
+        console.log(sq);
+      return sq;
+    }
+  </script>
 </html>
