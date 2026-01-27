@@ -42,14 +42,28 @@ function ironClothes(time) {
   });
 }
 
-loadClothes(2000)
-  .then(() => startWashing(3000))
-  .then(() => dryClothes(2000))
-  .then(() => foldClothes(1000))
-  .then(() => ironClothes(2000))
-  .then(() => {
-    console.log("Laundry completed");
-  })
-  .catch((error) => {
-    console.log("Error: " + error);
-  });
+// loadClothes(2000)
+//   .then(() => startWashing(3000))
+//   .then(() => dryClothes(2000))
+//   .then(() => foldClothes(1000))
+//   .then(() => ironClothes(2000))
+//   .then(() => {
+//     console.log("Laundry completed");
+//   })
+//   .catch((error) => {
+//     console.log("Error: " + error);
+//   });
+
+async function doLaundry() {
+    try {
+        await loadClothes(2000);
+        await startWashing(1000);
+        await dryClothes(500);
+        await foldClothes(1000);
+        await ironClothes(2000);
+        console.log("Laundry completed");
+    } catch (error) {
+        console.log("Error", error)
+    }
+}
+doLaundry()
