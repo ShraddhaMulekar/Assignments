@@ -8,6 +8,11 @@
 
 import React from "react";
 
-const myElement = <h1>hello world</h1>
+const myElement = (
+    <div id="container">
+        <h1>Shraddha, I am from Nagpur, Maharashtra.</h1>
+        <h2 style={{color:"navy", textAlign:"center"}}>I love to code.</h2>
+    </div>
+);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(myElement);
