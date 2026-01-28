@@ -4,3 +4,10 @@
 // ]);
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(element);
+
+
+import React from "react";
+
+const myElement = <h1>hello world</h1>
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(myElement);
