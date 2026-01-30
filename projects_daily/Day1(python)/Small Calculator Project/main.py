@@ -1,3 +1,5 @@
+# small Calculator project:
+
 def calculate(a, b, operator):
     if(operator == "+"):
         return a + b
