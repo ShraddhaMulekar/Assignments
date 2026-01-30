@@ -45,4 +45,12 @@ def add(a,b):
         f"division: {b/a}; "
         f"modulus: {a%b}."
     )
-add(20,30)
+# add(20,0)
+
+# try / except
+try :
+    add(20,0)
+except :
+    print("ZeroDivisionError: integer modulo by zero!")
+
+print("After solved!")
