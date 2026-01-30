@@ -65,7 +65,7 @@ json_str = json.dumps(data)
 print("json_str:", type(json_str), json_str)
 
 obj = json.loads(json_str)
-print("obj:", type(obj), obj)
+print("parse:", type(obj), obj)
 print(obj['name']) # key accessible
 
 
