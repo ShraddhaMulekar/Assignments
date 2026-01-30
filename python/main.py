@@ -33,3 +33,16 @@ for i in range(5):
 
 for i in language:
     print("for loop:", i)
+
+
+# Function (def)
+# math
+def add(a,b):
+    print(
+        f"addition: {a+b}; "
+        f"substraction: {a-b}; "
+        f"multiplication: {a*b}; "
+        f"division: {b/a}; "
+        f"modulus: {a%b}."
+    )
+add(20,30)
