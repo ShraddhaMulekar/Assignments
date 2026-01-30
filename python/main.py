@@ -1,3 +1,4 @@
+# varible, list, dist
 name = "shraddha"
 age = 25
 married = True
@@ -15,3 +16,12 @@ print(
     f"I learned {language[0]}, {language[1]}, {language[2]}."
     f"I am {'Unmarried' if not married else 'Married'}."
 )
+
+# if - elif - else condition
+age = 18
+if age > 18:
+    print("18+")
+elif age < 18:
+    print("-18")
+else:
+    print("18")
