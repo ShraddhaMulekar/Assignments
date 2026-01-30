@@ -25,3 +25,11 @@ elif age < 18:
     print("-18")
 else:
     print("18")
+
+
+# for loop
+for i in range(5):
+    print('loop:', i)
+
+for i in language:
+    print("for loop:", i)
