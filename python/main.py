@@ -1,3 +1,5 @@
+import json
+
 # varible, list, dist
 name = "shraddha"
 age = 25
@@ -54,3 +56,16 @@ except :
     print("ZeroDivisionError: integer modulo by zero!")
 
 print("After solved!")
+
+# JSON
+data = {"name": "Shraddha", "role": "Developer"}
+
+json_str = json.dumps(data)
+# print(json_str['name']) # error here key not accessible
+print("json_str:", type(json_str), json_str)
+
+obj = json.loads(json_str)
+print("obj:", type(obj), obj)
+print(obj['name']) # key accessible
+
+
