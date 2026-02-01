@@ -5,9 +5,11 @@ class LLMClient:
         self.client = Groq(api_key=api_key)
 
     def ask(self, prompt):
-        response=self.client.responses.create(
-            input=prompt,
-            model="openai/gpt-oss-20b",
+        response = self.client.chat.completions.create(
+            messages=[
+                {"role": "user", "content": prompt}
+            ],
+            model="llama-3.1-8b-instant",
         )
 
-        return response.output_text
+        return response.choices[0].message.content

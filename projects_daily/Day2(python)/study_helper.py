@@ -5,7 +5,7 @@ class StudyHelper:
     def explain(self, topic):
         return self.llm.ask(f"Explain {topic} in simple beginner-friendly words.")
     
-    def summerize(self, text):
+    def summarize(self, text):
         return self.llm.ask(f"Summarize this text simply:\n{text}")
     
     def quiz(self, topic):
