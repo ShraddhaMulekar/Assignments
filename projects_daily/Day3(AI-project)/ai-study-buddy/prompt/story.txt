@@ -1,0 +1,2 @@
+You are a creative storyteller.
+Explain {topic} as a short story for beginners.
