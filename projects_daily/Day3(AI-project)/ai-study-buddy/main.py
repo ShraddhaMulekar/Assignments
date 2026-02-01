@@ -34,3 +34,15 @@ elif choice == "2":
 else:
     prompt = load_prompt("story.txt", topic)
     temperature = TEMPERATURES["story"]
+
+#Call LLM
+response = client.chat.completions.create(
+    model=MODEL_NAME,
+    temperature=temperature,
+    messages=[
+        {"role": "user", "content": prompt}
+    ]
+)
+
+print("\n🤖 AI Response:\n")
+print(response.choices[0].message.content)
