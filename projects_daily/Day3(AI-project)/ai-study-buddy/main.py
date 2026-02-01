@@ -21,3 +21,16 @@ print("3. Story Explanation")
 
 choice = input("Choose mode (1/2/3): ")
 topic = input("Enter topic: ")
+
+#Prompt + Temperature
+if choice == "1":
+    prompt = load_prompt("beginner.txt", topic)
+    temperature = TEMPERATURES["beginner"]
+
+elif choice == "2":
+    prompt = load_prompt("interview.txt", topic)
+    temperature = TEMPERATURES["interview"]
+
+else:
+    prompt = load_prompt("story.txt", topic)
+    temperature = TEMPERATURES["story"]
