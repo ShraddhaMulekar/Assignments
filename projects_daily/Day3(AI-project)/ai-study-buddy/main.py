@@ -10,3 +10,5 @@ def load_prompt(file_name, topic):
         template=f.read()
     return template.replace("{topic}", topic)
 
+#Connect LLM
+client = OpenAI(api_key=os.getenv("GROQ_API_KEY"))
