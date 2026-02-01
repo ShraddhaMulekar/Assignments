@@ -12,3 +12,12 @@ def load_prompt(file_name, topic):
 
 #Connect LLM
 client = OpenAI(api_key=os.getenv("GROQ_API_KEY"))
+
+#User Input Flow
+print("\n📘 AI Study Buddy (Day 3)\n")
+print("1. Beginner Explanation")
+print("2. Interview Explanation")
+print("3. Story Explanation")
+
+choice = input("Choose mode (1/2/3): ")
+topic = input("Enter topic: ")
