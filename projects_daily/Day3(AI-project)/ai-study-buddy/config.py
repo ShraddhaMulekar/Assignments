@@ -1,7 +1,7 @@
-MODEL_NAME = "llama-3.1-8b-instant"
+MODEL_NAME = "openai/gpt-oss-20b"
 
 TEMPERATURES = {
-    "beginner":0.5,
-    "interview":0.3,
-    "story":0.9
+    "beginner": 0.2,
+    "interview": 0.4,
+    "story": 0.7
 }
