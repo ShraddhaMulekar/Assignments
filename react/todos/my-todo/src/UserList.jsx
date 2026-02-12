@@ -3,7 +3,7 @@ import axios from "axios";
 import UserData from './UserData';
 
 
-const TodoList = () => {
+const UserList = () => {
     const [users, setUsers] = useState([])
 
     const fetchTodo = async ()=>{
@@ -21,4 +21,4 @@ const TodoList = () => {
   )
 }
 
-export default TodoList
+export default UserList
