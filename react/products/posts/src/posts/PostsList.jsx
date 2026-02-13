@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import axios from "axios"
+import { themeContext, ThemeProvider } from '../context/ThemeContext' 
 
 const PostsList = () => {
     const [posts, setPosts] = useState([])
+    const {theme} = useContext(themeContext)
 
     const fetchPost = async ()=>{
         const res = await axios.get("https://jsonplaceholder.typicode.com/posts")
@@ -13,7 +15,7 @@ const PostsList = () => {
         fetchPost()
     },[])
   return (
-    <div>
+    <div className={`postList {theme}`}>
         <h1>Post</h1>
         <div>
             {posts.map((post)=>(
