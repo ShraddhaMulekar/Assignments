@@ -1,17 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../authContext/AuthContext";
 
 const Login = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLogIn = () => {
-    localStorage.setItem("authToken", "auth123Token");
-    setIsLoggedIn(true);
-  };
-
-  const handleLogOut = () => {
-    localStorage.removeItem("authToken");
-    setIsLoggedIn(false);
-  };
+    const {isLoggedIn, handleLogIn, handleLogOut} = useContext(AuthContext)
+ 
   return (
     <div>
       {isLoggedIn ? (
