@@ -7,6 +7,7 @@ import Login from "./Pages/Login";
 import NotFound from "./Pages/NotFound";
 import Product from "./Pages/Product";
 import ProductDetail from "./Pages/ProductDetail";
+import ProtectedRoutes from "./Pages/ProtectedRoutes";
 import viteLogo from "/vite.svg";
 // import './App.css'
 import { Link, Routes, Route } from "react-router-dom";
@@ -20,8 +21,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/products/:id" element={<ProductDetail />} />
+        <Route path="/product" element={<ProtectedRoutes><Product /></ProtectedRoutes>} />
+        <Route path="/products/:id" element={<ProtectedRoutes><ProductDetail /></ProtectedRoutes>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </nav>
