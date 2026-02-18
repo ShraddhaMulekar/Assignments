@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { AuthContext } from "../authContext/AuthContext";
+import { AuthContext } from "../Context/AuthContext";
 
 const Login = () => {
     const {isLoggedIn, handleLogIn, handleLogOut} = useContext(AuthContext)
