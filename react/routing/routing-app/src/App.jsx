@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Home from "./Pages/Home";
+import NotFound from "./Pages/NotFound";
 import Product from "./Pages/Product";
 import ProductDetail from "./Pages/ProductDetail";
 import viteLogo from "/vite.svg";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/product" element={<Product />} />
         <Route path="/products/:id" element={<ProductDetail />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </nav>
   );

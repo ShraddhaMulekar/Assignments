@@ -31,8 +31,8 @@ const ProductDetail = () => {
       </button>
       <h1>{proDetails?.title}</h1>
       <img src={proDetails?.image} alt={proDetails?.title} />
-      <p>{proDetails.price}</p>
-      <p>{proDetails.category}</p>
+      <p>Price:{proDetails.price}</p>
+      <p>Category: {proDetails.category}</p>
       <p>{proDetails.description}</p>
     </div>
   )
