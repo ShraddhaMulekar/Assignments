@@ -1,5 +1,5 @@
 import React from 'react'
-import { Home, Icon, Info, Mail, Wrench } from 'lucide-react';
+import { Home, Info, Mail, Wrench } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Layout = () => {
