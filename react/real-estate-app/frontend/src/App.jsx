@@ -7,7 +7,6 @@ import Contact from "./pages/Contact";
 import Services from "./pages/services";
 import Layout from "./pages/Layout";
 import { ChatProvider } from "./pages/ChatContext";
-// import './App.css'
 
 function App() {
   return (
