@@ -4,14 +4,12 @@ import CTA from "../components/CTA";
 import { Home, KeyRound, MessageCircleQuestion } from "lucide-react";
 
 const HomePage = () => {
-
   const openChat = () => {
     console.log("FAQ Chat will open later");
   };
 
   return (
     <div className="space-y-24">
-
       {/* HERO */}
       <section className="relative h-[80vh] flex items-center justify-center text-center">
         <img
@@ -79,7 +77,6 @@ const HomePage = () => {
           onClick={openChat}
         />
       </div>
-
     </div>
   );
 };

@@ -12,7 +12,6 @@ import { ChatProvider } from "./pages/ChatContext";
 function App() {
   return (
     <ChatProvider>
-      <Layout />
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />

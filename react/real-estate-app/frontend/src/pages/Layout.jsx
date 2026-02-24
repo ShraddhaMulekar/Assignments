@@ -79,6 +79,7 @@ function Layout() {
       <main className="flex-1">
         <Outlet />
       </main>
+
       <ChatWidget />
 
       <footer className="bg-gradient-to-r from-black via-gray-900 to-black text-gray-300">
