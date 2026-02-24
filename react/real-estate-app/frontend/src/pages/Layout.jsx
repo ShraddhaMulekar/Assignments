@@ -1,8 +1,9 @@
 import { Home, Info, Mail, Wrench, Menu, X } from "lucide-react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, Outlet } from "react-router-dom";
 import { useState } from "react";
+import ChatWidget from "./ChatWidget";
 
-function Layout({ children }) {
+function Layout() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
@@ -74,8 +75,12 @@ function Layout({ children }) {
           )}
         </nav>
       </div>
-      <main className="flex-1">{children}</main>
-      {/* <ChatWidget /> */}
+
+      <main className="flex-1">
+        <Outlet />
+      </main>
+      <ChatWidget />
+
       <footer className="bg-gradient-to-r from-black via-gray-900 to-black text-gray-300">
         <div className="max-w-7xl mx-auto px-6 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
