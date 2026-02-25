@@ -1,6 +1,7 @@
+import { Send } from "lucide-react";
 import { useRef } from "react";
+import { Base_URL } from "../base_url/Base_URL";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || ''
 
 const INITIAL_MESSAGE = {
         role:'assistant',
@@ -23,7 +24,7 @@ export default function ChatPanel(props) {
 
                 try{
                         const history = messages.map(({role, content}) => ({role, content}))
-                        const res = await fetch(`${API_BASE_URL}/api/chat`, {
+                        const res = await fetch(`${Base_URL}/api/chat`, {
                                 method: 'POST',
                                 headers: {"Content-Type": "application/json"},
                                 body: JSON.stringify({message: textMessage,history})
@@ -96,3 +97,5 @@ export default function ChatPanel(props) {
     </div>
         )
 }
+
+export {INITIAL_MESSAGE}

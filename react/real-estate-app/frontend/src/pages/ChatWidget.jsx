@@ -1,8 +1,17 @@
 import { MessageCircle } from "lucide-react";
 import { useChat } from "./ChatContext";
+import { useState } from "react";
+import { INITIAL_MESSAGE } from "./ChatPanel";
+import ChatPanel from "./ChatPanel";
 
 export default function ChatWidget() {
   const { setOpen, isOpen, closeChat } = useChat();
+
+  const [messages, setMessages] = useState([INITIAL_MESSAGE]);
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
   return (
     <>
       <button
@@ -17,7 +26,17 @@ export default function ChatWidget() {
           className="fixed bottom-24 right-6 z-[99] w-[calc(100vw-3rem)] max-w-md"
           style={{ maxHeight: "calc(100vh - 7rem)" }}
         >
-          <ChatPanel />
+          <ChatPanel
+            onClose={closeChat}
+            messages={messages}
+            setMessages={setMessages}
+            input={input}
+            setInput={setInput}
+            loading={loading}
+            setLoading={setLoading}
+            error={error}
+            setError={setError}
+          />
         </div>
       )}
     </>
