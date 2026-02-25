@@ -87,7 +87,7 @@ export default function ChatPanel(props) {
           <button
             onClick={sendMessage}
             disabled={loading || !input.trim()}
-            className="inline-flex items-center justify-center gap-1 px-4 py-2 text-sm font-medium text-white rounded-lg bg-brand-600 hover:bg-brand-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="inline-flex items-center justify-center gap-1 px-4 py-2 text-sm font-medium text-blue-400 rounded-lg bg-brand-600 hover:bg-brand-700 hover:border-1 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Send className="w-4 h-4" />
             Send
