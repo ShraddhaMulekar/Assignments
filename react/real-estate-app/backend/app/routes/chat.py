@@ -2,9 +2,7 @@ from fastAPI import APIRouter, HTTPException
 
 from app.models import ChatResponse, ChatRequest
 
-from app.services.chat_service import run_chat
-
-from app.models import ChatResponse, ChatRequest
+from app.graph import run_chat
 
 router = APIRouter(prefix='/api', tags=['chat'])
 
