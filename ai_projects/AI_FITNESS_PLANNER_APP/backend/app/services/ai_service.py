@@ -8,7 +8,7 @@ def generate_ai_response(prompt : str):
         messages = [
             {"role":"user", "content":prompt}
         ],
-        model = "llama3-8b-8192"
+        model = "openai/gpt-oss-20b"
     )
 
     return chat_completion.choices[0].message.content
