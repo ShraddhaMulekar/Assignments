@@ -10,3 +10,6 @@ python.exe
 ✅ STEP 3: Correct Activation Command (PowerShell)
 .\venv\Scripts\Activate.ps1
 (venv) PS D:\Desktop\...    <-----(after activate)
+
+Start server backend:
+    uvicorn app.main:app --reload   
