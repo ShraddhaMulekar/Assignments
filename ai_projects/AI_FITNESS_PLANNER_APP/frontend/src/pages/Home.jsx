@@ -33,36 +33,43 @@ const Home = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError(null);
-    setPlan(null);
-    setLoading(true);
+  e.preventDefault();
+  setError(null);
+  setPlan(null);
+  setLoading(true);
 
-    try {
-      const res = await fetch(`${base_url}/generate-plan`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
+  try {
+    const res = await fetch("http://127.0.0.1:8000/generate-plan", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        height: Number(form.height),
+        weight: Number(form.weight),
+        age: Number(form.age),
+        gender: form.gender,
+        // weight_goal: form.weightGoal,
+        activity_level: form.activityLevel,
+        goal: form.fitnessGoal,
+      }),
+    });
 
-      if (!res.ok) {
-        throw new Error("Failed to generate plan. Please try again.");
-      }
+    const data = await res.json();
+    setPlan(data);
 
-      const data = await res.json();
-      setPlan(data);
-    } catch (err) {
-      setError(err.message || "Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
+  } catch (err) {
+    setError(err.message);
+  } finally {
+    setLoading(false);
+  }
+};
+
+{loading && <p>Loading...</p>}
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50">
-      <header className="flex items-center justify-between px-6 py-4 md:px-10">
+      {/* <header className="flex items-center justify-between px-6 py-4 md:px-10">
         <div className="flex items-center gap-2">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-rose-600 text-sm font-semibold shadow-lg shadow-rose-500/40">
             AI
@@ -80,7 +87,7 @@ const Home = () => {
             <span>LangChain + Gemini AI</span>
           </button>
         </div>
-      </header>
+      </header> */}
 
       <main className="px-4 pb-10 pt-4 md:px-8">
         <div className="mx-auto max-w-5xl">
